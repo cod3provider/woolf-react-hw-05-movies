@@ -18,7 +18,7 @@ const MovieDetails = () => {
 				setMovie(film);
 			}
 			catch (err) {
-				console.log(err)
+				console.log(err);
 			}
 		}
 
@@ -36,8 +36,9 @@ const MovieDetails = () => {
 					<AboutMovie about={movie}/>
 					<p>Info</p>
 					<Link to='cast' state={{from}}>Cast</Link>
+					<Link to='reviews' state={{from}}>Review</Link>
 					<Suspense fallback={<p>...Loading</p>}>
-						<Outlet />
+						<Outlet/>
 					</Suspense>
 				</>
 			)}

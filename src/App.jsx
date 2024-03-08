@@ -6,6 +6,7 @@ import MovieDetails from "./pages/MovieDetails/MovieDetails.jsx";
 import Movies from "./pages/Movies/Movies.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
 import Cast from "./components/Cast/Cast.jsx";
+import Reviews from "./components/Reviews/Reviews.jsx";
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 				<Route path="/movies" element={<Movies/>}/>
 				<Route path="/movies/:movieId" element={<MovieDetails/>}>
 					<Route path="cast" element={<Cast />}/>
+					<Route path="reviews" element={<Reviews />} />
 				</Route>
 				<Route path="*" element={<NotFound />}/>
 			</Route>
