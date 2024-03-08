@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
-
 import {getCast, POSTER_URL} from "../../api/api.js";
 
 const Cast = () => {
@@ -11,7 +10,6 @@ const Cast = () => {
 		const getMovieCast = async () => {
 			try {
 				const data = await getCast(movieId);
-				console.log('data', data)
 				setCast(data);
 			}
 			catch (err) {
@@ -21,8 +19,6 @@ const Cast = () => {
 
 		getMovieCast();
 	}, [movieId]);
-
-	console.log('cast', cast);
 
 	const castItem = cast.map(({id, name, profile_path}) => (
 		<li key={id}>
