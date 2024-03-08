@@ -20,6 +20,28 @@ const Movies = () => {
 		setQuery('');
 	}
 
+	useEffect(() => {
+		if (!movieSearchParams) {
+			return;
+		}
+
+		const getMovie = async () => {
+			try {
+				const data = await searchMovies(movieSearchParams)
+				if (!data.length) {
+					alert('Something went wrong');
+					return;
+				}
+				setMovies(data);
+			}
+			catch (err) {
+				console.log(err)
+			}
+		}
+
+		getMovie()
+	}, [movieSearchParams]);
+
 	return (
 		<>
 			<form onSubmit={handleSubmit}>
