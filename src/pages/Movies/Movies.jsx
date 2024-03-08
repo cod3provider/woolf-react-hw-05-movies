@@ -1,12 +1,12 @@
 import {useEffect, useState} from "react";
 import {useSearchParams} from "react-router-dom";
 import {searchMovies} from "../../api/api.js";
+import MoviesList from "../../components/MoviesList/MoviesList.jsx";
 
 const Movies = () => {
-	const [movies, setMovies] = useState([]);
+	const [films, setFilms] = useState([]);
 	const [query, setQuery] = useState('');
 	const [searchParams, setSearchParams] = useSearchParams();
-
 	const movieSearchParams = searchParams.get('query');
 
 	const handleChange = e => {
@@ -32,7 +32,7 @@ const Movies = () => {
 					alert('Something went wrong');
 					return;
 				}
-				setMovies(data);
+				setFilms(data);
 			}
 			catch (err) {
 				console.log(err)
@@ -54,6 +54,7 @@ const Movies = () => {
 				<button type="submit">Search</button>
 			</form>
 
+			{films && <MoviesList movies={films}/>}
 		</>
 	)
 }
