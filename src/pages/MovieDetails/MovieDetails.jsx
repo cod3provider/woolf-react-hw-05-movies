@@ -5,6 +5,8 @@ import AboutMovie from "../../components/AboutMovie/AboutMovie.jsx";
 
 import {getDetails} from "../../api/api.js";
 
+import s from "./MovieDetails.module.css";
+
 const MovieDetails = () => {
 	const [movie, setMovie] = useState(null);
 
@@ -32,15 +34,22 @@ const MovieDetails = () => {
 	return (
 		<>
 			{movie && (
-				<>
+				<div>
 					<AboutMovie about={movie}/>
-					<p>Info</p>
-					<Link to='cast' state={{from}}>Cast</Link>
-					<Link to='reviews' state={{from}}>Review</Link>
+					<h2>Info</h2>
+					<ul className={s.list}>
+						<li>
+							<Link to='cast' state={{from}}>Cast</Link>
+						</li>
+
+						<li>
+							<Link to='reviews' state={{from}}>Review</Link>
+						</li>
+					</ul>
 					<Suspense fallback={<p>...Loading</p>}>
 						<Outlet/>
 					</Suspense>
-				</>
+				</div>
 			)}
 		</>
 	)
