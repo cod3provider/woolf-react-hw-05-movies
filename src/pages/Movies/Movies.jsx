@@ -1,7 +1,11 @@
 import {useEffect, useState} from "react";
 import {useSearchParams} from "react-router-dom";
-import {searchMovies} from "../../api/api.js";
+
 import MoviesList from "../../components/MoviesList/MoviesList.jsx";
+
+import {searchMovies} from "../../api/api.js";
+
+import s from './Movies.module.css';
 
 const Movies = () => {
 	const [films, setFilms] = useState([]);
@@ -44,14 +48,15 @@ const Movies = () => {
 
 	return (
 		<>
-			<form onSubmit={handleSubmit}>
+			<form className={s.form} onSubmit={handleSubmit}>
 				<input
+					className={s.input}
 					onChange={handleChange}
 					type="text"
 					value={query}
 					placeholder="Enter a name of film"
 				/>
-				<button type="submit">Search</button>
+				<button className={s.button} type="submit">Search</button>
 			</form>
 
 			{films && <MoviesList movies={films}/>}

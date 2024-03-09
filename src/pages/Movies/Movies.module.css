@@ -1,0 +1,30 @@
+.form {
+    margin: 50px 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.input {
+    padding: 8px 16px;
+    font-size: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: transparent;
+    transition: border 250ms linear;
+}
+
+.input:hover {
+    border: 1px solid #fff;
+}
+
+.input:focus {
+    border: 1px solid cornflowerblue;
+}
+
+.button {
+    padding: 8px 16px;
+    font-size: 20px;
+    transition: border 250ms linear;
+}
