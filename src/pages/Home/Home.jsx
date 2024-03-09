@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
 import {getMovies} from "../../api/api.js";
 import MoviesList from "../../components/MoviesList/MoviesList.jsx";
-import Container from "../../components/common/Container/Container.jsx";
+
+import s from './Home.module.css';
 
 const Home = () => {
 	const [trendingMovies, setTrendingMovies] = useState([]);
@@ -22,10 +23,10 @@ const Home = () => {
 
 
 	return (
-		<Container>
-			<h1>Trending today</h1>
+		<>
+			<h1 className={s.title}>Trending today</h1>
 			<MoviesList movies={trendingMovies} />
-		</Container>
+		</>
 	)
 }
 
