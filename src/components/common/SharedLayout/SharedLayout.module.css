@@ -1,6 +1,32 @@
-.nav{
+.header {
+    width: 100%;
+    border-bottom: 1px solid #9a64c4;
+    /*height: 60px;*/
+    /*padding: 20px 0;*/
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 24px;
+    margin: 0 auto;
+}
+
+.link {
+    padding: 20px 0;
+    font-size: 18px;
+    transition: color 250ms linear;
+}
+
+.logoLink {
+    position: absolute;
+    left: 0;
 }
