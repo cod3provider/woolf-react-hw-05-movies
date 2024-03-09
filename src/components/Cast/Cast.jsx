@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {getCast, POSTER_URL} from "../../api/api.js";
+import NoActor from "../NoActor/NoActor.jsx";
 
 const Cast = () => {
 	const [cast, setCast] = useState([]);
@@ -22,7 +23,15 @@ const Cast = () => {
 
 	const castItem = cast.map(({id, name, profile_path}) => (
 		<li key={id}>
-			<img src={`${POSTER_URL}/${profile_path}`} alt="actors photo" width='200'/>
+			{profile_path
+				?
+				<img
+					src={`${POSTER_URL}/${profile_path}`}
+					alt="actors photo" width='200'
+				/>
+				:
+				<NoActor />
+			}
 			<p>
 				{name}
 			</p>
