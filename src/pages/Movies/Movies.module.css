@@ -9,7 +9,7 @@
 .input {
     padding: 8px 16px;
     font-size: 20px;
-    border: 1px solid transparent;
+    border: 1px solid #c6dbff;
     border-radius: 4px;
     outline: transparent;
     transition: border 250ms linear;

@@ -11,10 +11,10 @@ const SharedLayout = () => {
 		<Container>
 			<header className={s.header}>
 				<nav className={s.nav}>
-					<Logo />
+					<Logo/>
 					<div className={s.wrapper}>
-					<NavLink className={s.link} to="/">Home</NavLink>
-					<NavLink className={s.link} to="/movies">Search</NavLink>
+						<NavLink className={s.link} to="/">Home</NavLink>
+						<NavLink className={s.link} to="/movies">Search</NavLink>
 					</div>
 				</nav>
 			</header>
