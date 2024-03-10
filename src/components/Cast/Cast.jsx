@@ -1,7 +1,10 @@
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {getCast, POSTER_URL} from "../../api/api.js";
+
 import NoActor from "../NoActor/NoActor.jsx";
+
+import s from './Cast.module.css';
 
 const Cast = () => {
 	const [cast, setCast] = useState([]);
@@ -39,7 +42,7 @@ const Cast = () => {
 	))
 
 	return (
-		<ul>
+		<ul className={s.list}>
 			{castItem}
 		</ul>
 	)

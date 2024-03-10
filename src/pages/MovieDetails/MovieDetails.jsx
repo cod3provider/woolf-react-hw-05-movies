@@ -1,5 +1,5 @@
 import {Suspense, useEffect, useState} from "react";
-import {Link, Outlet, useLocation, useParams} from "react-router-dom";
+import { NavLink, Outlet, useLocation, useParams} from "react-router-dom";
 
 import AboutMovie from "../../components/AboutMovie/AboutMovie.jsx";
 
@@ -34,16 +34,16 @@ const MovieDetails = () => {
 	return (
 		<>
 			{movie && (
-				<div>
+				<div className={s.infoWrap}>
 					<AboutMovie about={movie}/>
 					<h2>Info</h2>
 					<ul className={s.list}>
 						<li>
-							<Link to='cast' state={{from}}>Cast</Link>
+							<NavLink className={s.linksList} to='cast' state={{from}}>Cast</NavLink>
 						</li>
 
 						<li>
-							<Link to='reviews' state={{from}}>Review</Link>
+							<NavLink className={s.linksList} to='reviews' state={{from}}>Review</NavLink>
 						</li>
 					</ul>
 					<Suspense fallback={<p>...Loading</p>}>
