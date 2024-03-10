@@ -1,0 +1,20 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 980px;
+}
+
+.img {
+    /*max-width: 500px;*/
+    height: auto;
+}
+
+.overview {
+    @media (1280px <= width) {
+    max-width: 1000px;
+    text-align: start;
+}
+}
