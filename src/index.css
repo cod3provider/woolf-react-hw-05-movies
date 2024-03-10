@@ -1,4 +1,7 @@
+@import-normalize;
+
 :root {
+    box-sizing: border-box;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -42,7 +45,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #3440f8;
+  color: #b734f8;
 }
 
 body {
