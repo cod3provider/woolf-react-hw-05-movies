@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 import MoviesList from "../../components/MoviesList/MoviesList.jsx";
 
@@ -33,7 +35,7 @@ const Movies = () => {
       try {
         const data = await searchMovies(movieSearchParams);
         if (!data.length) {
-          alert("Something went wrong");
+          toast.warn("Something went wrong. Try again");
           return;
         }
         setFilms(data);
@@ -61,6 +63,18 @@ const Movies = () => {
       </form>
 
       {films.length > 0 && <MoviesList movies={films} />}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </>
   );
 };
