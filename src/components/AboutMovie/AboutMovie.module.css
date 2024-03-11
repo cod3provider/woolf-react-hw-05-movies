@@ -13,7 +13,7 @@
 
 .overview {
     @media (1280px <= width) {
-    max-width: 1000px;
-    text-align: start;
-}
+        max-width: 1000px;
+        text-align: start;
+    }
 }

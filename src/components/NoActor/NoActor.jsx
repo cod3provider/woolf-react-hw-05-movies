@@ -1,11 +1,11 @@
-import image from '../../assets/NoUser.png'
+import image from "../../assets/NoUser.png";
 
 const NoActor = () => {
-	return (
-		<>
-			<img src={image} alt="picture no image" width='200'/>
-		</>
-	)
-}
+  return (
+    <>
+      <img src={image} alt="picture no image" width="200" />
+    </>
+  );
+};
 
 export default NoActor;
