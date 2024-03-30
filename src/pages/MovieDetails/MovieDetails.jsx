@@ -54,7 +54,7 @@ const MovieDetails = () => {
               </NavLink>
             </li>
           </ul>
-          <Suspense fallback={<p>...Loading</p>}>
+          <Suspense fallback={<p className={s.fallback}>...Loading</p>}>
             <Outlet />
           </Suspense>
         </div>

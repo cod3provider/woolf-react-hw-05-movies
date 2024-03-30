@@ -42,3 +42,7 @@
     height: 2px;
     border-radius: 5px;
 }
+
+.fallback {
+    margin-top: 60px;
+}

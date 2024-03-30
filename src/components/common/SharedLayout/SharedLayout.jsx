@@ -22,7 +22,7 @@ const SharedLayout = () => {
           </div>
         </nav>
       </header>
-      <Suspense fallback={<p>...Loading</p>}>
+      <Suspense fallback={<p className={s.fallback}>...Loading</p>}>
         <Outlet />
       </Suspense>
     </Container>
